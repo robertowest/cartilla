@@ -1,0 +1,30 @@
+{% extends 'default.html' %}
+{% load static %}
+
+{% block stylesheets %}
+    <link href="{% static 'cartilla/img/favicon.ico' %}" rel="icon" type="image/x-icon" />
+    <link href="{% static 'cartilla/css/estilos.css' %}" rel="stylesheet" />
+{% endblock stylesheets %}
+
+{% block jsbefore %}
+    <script src="{% static 'vendors/fontawesome/js/all.js' %}"></script>
+{% endblock jsbefore %}
+
+{% block content %}
+    {% include 'cartilla/includes/navigation.html' %}
+    {% include 'cartilla/includes/masthead.html' %}
+    {% include 'cartilla/includes/portfolio.html' %}
+    {% include 'cartilla/includes/about.html' %}
+    {% include 'cartilla/includes/contact.html' %}
+    {% include 'cartilla/includes/footer.html' %}
+    {% include 'cartilla/includes/copyright.html' %}
+    {% include 'cartilla/includes/portfolio_modal.html' %}
+{% endblock content %}
+
+{% block javascripts %}
+    <script src="{% static 'vendors/jquery/js/jquery.js' %}"></script>
+    <script src="{% static 'vendors/bootstrap4/js/bootstrap.bundle.js' %}"></script>
+    <script src="{% static 'vendors/jquery/js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'cartilla/js/scripts.js' %}"></script>
+    <script src="{% static 'cartilla/js/sb-forms-0.4.1.js' %}"></script>
+{% endblock javascripts %}

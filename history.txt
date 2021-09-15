@@ -1,0 +1,10 @@
+mkdir restaurante
+cd restaurante
+touch requirements.txt
+python3 -m venv ~/.virtualenv/django32
+source ~/.virtualenv/django32/bin/activate
+python -m pip install --upgrade pip
+pip install -r requirements.txt 
+django-admin startproject config .
+mkdir static
+django-admin startapp cartilla && touch cartilla/urls.py

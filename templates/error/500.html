@@ -1,0 +1,79 @@
+{% extends 'default.html' %}
+
+{% block stylesheets %}
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        body {
+            background: #ffffff url('/static/suit/img/bg_pattern.jpg') top left;
+            color: #333;
+            font: 16px / 21px 'Open Sans', sans-serif;
+            -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+            -webkit-text-size-adjust: 100%;
+            letter-spacing: 0.5;
+            /* text-shadow: 0 1px 0 rgba(255, 255, 255, .5); */
+        }
+
+        h1 {
+            font-size: 48.5px;
+            letter-spacing: -3px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 48.5px;
+            letter-spacing: -3px;
+            color: rgba(0, 0, 0, .2);
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+            margin-bottom: 20px;
+        }
+
+        .distance {
+            margin-bottom: -175px; /* half of content height */
+            /*background: red;*/ /* temporary - used to see div */
+            width: 1px; /* required to "hide" distance div */
+            height: 50%; /* required */
+            float: left; /* required */
+        }
+
+        .container {
+            position: relative; /* positions content on top of distance */
+            text-align: left; /* horizontal centering hack for IE */
+            height: 350px; /* required - desired height */
+            width: 700px; /* required - desired width */
+            margin: 0 auto; /* required */
+            clear: left; /* required */ z-index: 1;
+        }
+
+        .btn {
+            margin-top: 40px;
+        }
+    </style>
+{% endblock stylesheets %}
+
+{% block content %}
+    <div class="distance"></div>
+
+    <div class="container">
+        <h2 class="pull-right">
+            Error 500
+        </h2>
+
+        <h1>Error Interno del Servidor</h1>
+
+        <div class="content">
+            Parece que algo salió mal ...<br>
+            Estamos trabajando para solucionar este problema.
+            <br>
+            <a href="/" class="btn btn-primary">Ir a la página de inicio</a>
+        </div>
+    </div>
+{% endblock content %}
